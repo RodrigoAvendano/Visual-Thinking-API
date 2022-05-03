@@ -1,0 +1,28 @@
+{
+  "name": "visual-thinking-api",
+  "version": "1.0.0",
+  "description": "Code Challenge : Visual Thinking API",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/jest/bin/jest.js -i",
+    "linter": "node ./node_modules/eslint/bin/eslint.js .",
+    "linter-fix": "node ./node_modules/eslint/bin/eslint.js . --fix",
+    "server": "node ./lib/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RodrigoAvendano/Visual-Thinking-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RodrigoAvendano/Visual-Thinking-API/issues"
+  },
+  "homepage": "https://github.com/RodrigoAvendano/Visual-Thinking-API#readme",
+  "dependencies": {
+    "jest": "^26.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.14.0"
+  }
+}
