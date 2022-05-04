@@ -2,7 +2,7 @@ const Student = require("../../lib/controller/StudentController");
 
 describe("Test for StudentController Class",()=>{
     test("1. Test for getStudentList method",()=>{
-        const allStudents = Student.getStudentsList("visualpartners.json");
+        const allStudents = Student.getStudentsList();
         const expected = [
             {
                 "id": "6264d5d8dd1a0be4e249c662",
@@ -20,12 +20,12 @@ describe("Test for StudentController Class",()=>{
     });
 
     test("2. Second test for getStudentList method",()=>{
-        const allStudents = Student.getStudentsList("visualpartners.json");
+        const allStudents = Student.getStudentsList();
         expect(allStudents.length).toBe(51);
     });
 
     test("3. Test for getStudentsEmail method",()=>{
-        const allStudents = Student.getStudentsEmail("visualpartners.json");
+        const allStudents = Student.getStudentsEmail();
         const expected = [
             {
                 "id": "6264d5d8878a117a9c57c5c4",
@@ -43,7 +43,7 @@ describe("Test for StudentController Class",()=>{
     });
 
     test("3. Test for getStudentsCredits method",()=>{
-        const allStudents = Student.getStudentsCredits("visualpartners.json");
+        const allStudents = Student.getStudentsCredits();
         const expected = [
             {
                 "id": "6264d5d82c0b4c7dfb0b6ad5",
