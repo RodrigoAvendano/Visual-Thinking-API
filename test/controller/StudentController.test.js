@@ -41,4 +41,22 @@ describe("Test for StudentController Class",()=>{
         ];
         expect(allStudents).toEqual(expect.arrayContaining(expected));
     });
+
+    test("3. Test for getStudentsCredits method",()=>{
+        const allStudents = Student.getStudentsCredits("visualpartners.json");
+        const expected = [
+            {
+                "id": "6264d5d82c0b4c7dfb0b6ad5",
+                "name": "Kara",
+                "email": "Simon@visualpartnership.xyz",
+                "credits": 833,
+                "enrollments": [
+                    "Visual Thinking Avanzado"
+                ],
+                "previousCourses": 8,
+                "haveCertification": false
+            },
+        ];
+        expect(allStudents).toEqual(expect.arrayContaining(expected));
+    });
 });
