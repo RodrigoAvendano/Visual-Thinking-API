@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/RodrigoAvendano/Visual-Thinking-API#readme",
   "dependencies": {
+    "express": "^4.18.1",
     "jest": "^26.0.0"
   },
   "devDependencies": {
