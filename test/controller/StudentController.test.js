@@ -23,4 +23,22 @@ describe("Test for StudentController Class",()=>{
         const allStudents = Student.getStudentsList("visualpartners.json");
         expect(allStudents.length).toBe(51);
     });
+
+    test("3. Test for getStudentsEmail method",()=>{
+        const allStudents = Student.getStudentsEmail("visualpartners.json");
+        const expected = [
+            {
+                "id": "6264d5d8878a117a9c57c5c4",
+                "name": "Claudia",
+                "email": "Howell@visualpartnership.xyz",
+                "credits": 227,
+                "enrollments": [
+                    "Visual Thinking Avanzado"
+                ],
+                "previousCourses": 5,
+                "haveCertification": true
+            },
+        ];
+        expect(allStudents).toEqual(expect.arrayContaining(expected));
+    });
 });
