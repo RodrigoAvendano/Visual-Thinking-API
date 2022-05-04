@@ -25,4 +25,23 @@ describe("Test for StudentService class", () => {
         ];
         expect(mailList).toEqual(expect.arrayContaining(expected));
     });
+
+    test("3. Testing getCredits method", () => {
+        const studentList = Reader.readJsonFile("visualpartners.json");
+        const creditList = StudentService.getCredits(studentList);
+        const expected = [
+            {
+                "id": "6264d5d8dd1a0be4e249c662",
+                "name": "Phillips",
+                "email": "Camacho@visualpartnership.xyz",
+                "credits": 973,
+                "enrollments": [
+                    "Visual Thinking Intermedio"
+                ],
+                "previousCourses": 8,
+                "haveCertification": false
+            },
+        ];
+        expect(creditList).toEqual(expect.arrayContaining(expected));
+    });
 });
