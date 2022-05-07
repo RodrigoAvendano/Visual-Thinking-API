@@ -27,17 +27,7 @@ describe("Test for StudentController Class",()=>{
     test("3. Test for getStudentsEmail method",()=>{
         const allStudents = Student.getStudentsEmail();
         const expected = [
-            {
-                "id": "6264d5d8878a117a9c57c5c4",
-                "name": "Claudia",
-                "email": "Howell@visualpartnership.xyz",
-                "credits": 227,
-                "enrollments": [
-                    "Visual Thinking Avanzado"
-                ],
-                "previousCourses": 5,
-                "haveCertification": true
-            },
+            {"certification": true, "email": "Benton@visualpartnership.xyz", "name": "Constance"},
         ];
         expect(allStudents).toEqual(expect.arrayContaining(expected));
     });
@@ -45,17 +35,7 @@ describe("Test for StudentController Class",()=>{
     test("3. Test for getStudentsCredits method",()=>{
         const allStudents = Student.getStudentsCredits();
         const expected = [
-            {
-                "id": "6264d5d82c0b4c7dfb0b6ad5",
-                "name": "Kara",
-                "email": "Simon@visualpartnership.xyz",
-                "credits": 833,
-                "enrollments": [
-                    "Visual Thinking Avanzado"
-                ],
-                "previousCourses": 8,
-                "haveCertification": false
-            },
+            {"credits": 552, "name": "Richards"},
         ];
         expect(allStudents).toEqual(expect.arrayContaining(expected));
     });
