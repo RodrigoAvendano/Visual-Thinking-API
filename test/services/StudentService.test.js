@@ -13,15 +13,7 @@ describe("Test for StudentService class", () => {
         const studentList = Reader.readJsonFile("visualpartners.json");
         const mailList = StudentService.getEmail(studentList);
         const expected = [
-            {
-                id: "6264d5d8878a117a9c57c5c4",
-                name: "Claudia",
-                email: "Howell@visualpartnership.xyz",
-                credits: 227,
-                enrollments: ["Visual Thinking Avanzado"],
-                previousCourses: 5,
-                haveCertification: true,
-            },
+            {"certification": true, "email": "Benton@visualpartnership.xyz", "name": "Constance"},
         ];
         expect(mailList).toEqual(expect.arrayContaining(expected));
     });
@@ -30,17 +22,7 @@ describe("Test for StudentService class", () => {
         const studentList = Reader.readJsonFile("visualpartners.json");
         const creditList = StudentService.getCredits(studentList);
         const expected = [
-            {
-                "id": "6264d5d8dd1a0be4e249c662",
-                "name": "Phillips",
-                "email": "Camacho@visualpartnership.xyz",
-                "credits": 973,
-                "enrollments": [
-                    "Visual Thinking Intermedio"
-                ],
-                "previousCourses": 8,
-                "haveCertification": false
-            },
+            {"credits": 552, "name": "Richards"},
         ];
         expect(creditList).toEqual(expect.arrayContaining(expected));
     });
